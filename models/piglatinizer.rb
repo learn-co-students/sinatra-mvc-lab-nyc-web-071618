@@ -6,14 +6,14 @@ class PigLatinizer
     str_list = str.split(" ")
     vowels = "aoiueAOIUE"
     str_list.map{|str|
-      idx = 0
-      while idx <str.size
-        break if vowels.include?(str[idx])
-        idx += 1
+      num = 0
+      while num <str.size
+        break if vowels.include?(str[num])
+        num += 1
       end
 
-      new_str = str[idx...str.size] + str[0...idx]
-      if idx == 0
+      new_str = str[num...str.size] + str[0...num]
+      if num == 0
         new_str += "way"
       else
         new_str += "ay"
